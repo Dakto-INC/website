@@ -1,0 +1,61 @@
+.colbox,.pbox {
+display: flex;
+}
+.pbox {
+  width: 50%;
+  border-radius: 100px;
+  margin: 10px 10px 10px 10px;
+  padding: 12px 12px 12px 12px;
+  border-color: gold;
+  border-width: 5px;
+  border-style: dashed;
+}
+.ptbox {
+display: block;
+}
+
+.ptbox p {
+	  font-size: 18px;
+}
+
+.name {
+  font-size: 30px;
+}
+
+.title {
+	text-align: center;
+	text-decoration-line: underline;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+.admin {
+	color: #029b02;
+}
+.former {
+	color:  rgb(114, 9, 9);
+}
+.mod {
+	color: #9b0202;
+}
+
+.owner {
+	color: #029b9b;
+}
+.name {
+	font-size: 30px;
+}
+
+.player {
+  height: 100px;
+}
+ /* DONT REMOVE */
+@media only screen and (max-width:600px){
+.colbox {
+	display: block !important;
+  }
+
+  .pbox {
+  width: 100%;
+  }
+}
