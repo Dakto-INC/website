@@ -8,15 +8,27 @@ body {
   transition-timing-function: linear;
 transition-duration: 0.5s;
 }
+/*Dak use em fpr sizing in .dki-nav-logo and .dki-nav-arrow and .dki-nav
+ * so that the size of them can
+ * be relative to the font-size of the nav bar
+ */
+.dki-nav-logo {height: 3em;}
+.dki-nav-arrow{
+	margin-left: -1em;
+	width: 2em;
+  margin-bottom: -0.7em;
+}
+ 
 .dki-nav {
 	background: #1e1e1e;
   color: #fff;
   display: flex;
   justify-content: center;
-  line-height: 50px;
+  line-height: 3em;
   padding: 10px 0;
   margin-bottom: -30px;
   font-size: 15px !important;
+  height: 6em;
  }
 
 .dki-nav ul {
@@ -28,10 +40,6 @@ transition-duration: 0.5s;
 
 .dki-nav li {
   position: relative;
-}
-
-.dki-nav > ul > li {
-  margin: 0 15px;
 }
 
 .dki-nav a {
@@ -51,19 +59,13 @@ transition-duration: 0.5s;
   font-weight: normal;
 }
 
-.dki-nav-arrow{
-	margin-left: -20px;
-	width: 30px;
-	margin-bottom: -10px;
-}
- 
+
 .dki-nav-clickbox{display: block ruby;}
 .dki-nav  .open > .dki-nav-clickbox > .dki-nav-arrow {rotate: 180deg;}
 .dki-nav  .open > ul {
   display: block;
 }
 
-.dki-nav-logo {height: 50px;}
 .widerinfoboxframe{width:100%; height:70vh;border: none; }
 .contactbox{display: flex; justify-content: center; align-items: flex-start; }
 .discordframe{width:10%; height: 100vh; 
