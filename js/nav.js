@@ -1,6 +1,5 @@
 function setupNavDropdowns() {
-  if (window.innerWidth <= 600) {
-    document.querySelectorAll('nav .has-dropdown > a').forEach(function(anchor) {
+    document.querySelectorAll('.dki-nav-clickbox').forEach(function(anchor) {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
         var li = anchor.parentElement;
@@ -10,7 +9,6 @@ function setupNavDropdowns() {
         });
       });
     });
-  }
 }
 document.addEventListener('DOMContentLoaded', setupNavDropdowns);
-window.addEventListener('resize', setupNavDropdowns);
+

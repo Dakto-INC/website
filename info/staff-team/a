@@ -1,9 +1,0 @@
-    <noscript>
-        <h1> Ths site will break without js !!!</h1>
-    </noscript>
-    <div id="fatbox">
-        <h1 id="fattextbox">Staff Team</h1>
-    </div>
-    <div id="staffs-embed" class="fullpage-embed">
-      <iframe src="./hack" title="Staff Team" frameborder="0" allowfullscreen></iframe>
-    </div>

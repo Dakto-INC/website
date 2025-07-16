@@ -1,11 +1,14 @@
 body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f4f4f4;
-  color: #333;
+  margin: 0 !important;;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;;
+  background: #f4f4f4 !important;
+  color: #333 !important;
 }
-
-nav {
+* {
+  transition-timing-function: linear;
+transition-duration: 0.5s;
+}
+.dki-nav {
 	background: #1e1e1e;
   color: #fff;
   display: flex;
@@ -13,24 +16,25 @@ nav {
   line-height: 50px;
   padding: 10px 0;
   margin-bottom: -30px;
+  font-size: 15px !important;
  }
 
-nav ul {
+.dki-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
 
-nav li {
+.dki-nav li {
   position: relative;
 }
 
-nav > ul > li {
+.dki-nav > ul > li {
   margin: 0 15px;
 }
 
-nav a {
+.dki-nav a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
@@ -38,37 +42,33 @@ nav a {
   display: block;
 }
 
-nav ul ul li {
+.dki-nav ul ul li {
   width: 100%;
 }
 
-nav ul ul a {
+.dki-nav ul ul a {
   padding: 10px;
   font-weight: normal;
 }
 
-
-/* TODO :FIX mobile support
- * https://www.w3schools.com/tags/tag_summary.asp
- * https://stackoverflow.com/questions/22559756/changing-hover-to-touch-click-for-mobile-devices
- */
-
-nav li:hover > ul ,
-nav li:focus > ul ,
-nav li:active > ul,
-nav li > ul:hover ,
-nav li > ul:focus ,
-nav li > ul:active
-{
+.dki-nav-arrow{
+	margin-left: -20px;
+	width: 30px;
+	margin-bottom: -10px;
+}
+ 
+.dki-nav-clickbox{display: block ruby;}
+.dki-nav  .open > .dki-nav-clickbox > .dki-nav-arrow {rotate: 180deg;}
+.dki-nav  .open > ul {
   display: block;
 }
-.nav-logo {height: 50px;}
-.appfr{width:90vw; max-width:1200px; height:70vh; }
-.stfr{width:100%; height:70vh; }
-.conbox{display: flex; justify-content: center; align-items: flex-start; }
-.disfr{width:10% !important; height: 100vh!important; 
+
+.dki-nav-logo {height: 50px;}
+.widerinfoboxframe{width:100%; height:70vh;border: none; }
+.contactbox{display: flex; justify-content: center; align-items: flex-start; }
+.discordframe{width:10%; height: 100vh; 
 	max-width: 350px;}
-nav ul ul {
+.dki-nav ul ul {
 	margin-top: -20px;
   display: none;
   position: absolute;
@@ -79,17 +79,19 @@ nav ul ul {
   min-width: 160px;
   z-index: 1000;
 }
-#appeal {display: flex; justify-content: center; align-items: center; min-height: 70vh;}
+#widerinfobox {width: 90vw; min-height: 70vh;}
+#infobox,#widerinfobox {
+ margin: 40px auto 0 auto; background: rgba(255,255,255,0.95);}
 #infobox {
-max-width: 900px; margin: 40px auto 0 auto; background: rgba(255,255,255,0.95);}
+max-width: 900px; }
 
-.card,.disfr {
+.card,.discordframe {
 	flex: 1 1 250px;
 	background: #fff;
 	margin: 15px 0px 15px 15px;
 }
 
-.card,.disfr,#infobox,.appfr {
+.card,.discordframe,#infobox,#widerinfobox {
 	border-radius: 8px;
 	box-shadow: 0 0 10px rgba(151, 148, 148, 0.2);
 	border-style: none;
@@ -164,20 +166,23 @@ footer {
 	width: 100%;
   aspect-ratio: 16/9;
 }
-
+.nojswarn {
+  text-align: center;
+  background: red;
+}
 @media (max-width: 600px) {
-  nav {
+  .dki-nav {
     flex-direction: column;
     padding: 8px 0;
   }
-  nav ul {
+  .dki-nav ul {
     flex-direction: column;
     align-items: flex-start;
   }
-  nav > ul > li {
+  .dki-nav > ul > li {
     margin: 6px 0;
   }
-  nav a {
+  .dki-nav a {
     padding: 10px 8px;
     font-size: 1em;
   }
@@ -189,7 +194,7 @@ footer {
     font-size: 1.5em;
     padding: 10px 16px;
   }
-     .card {
+     .card,.discordframe {
     min-width: 90vw;
     max-width: 98vw;
     margin: 10px 0;
@@ -205,33 +210,26 @@ footer {
     padding: 10px;
     font-size: 0.9em;
   }
-  nav ul ul {
+  .dki-nav ul ul {
     position: static;
     min-width: 100%;
     margin-top: 0;
     box-shadow: none;
   }
-  nav li {
+  .dki-nav li {
     width: 100%;
   }
-  nav li > a {
+  .dki-nav li > a {
     width: 100%;
   }
-  nav li.open > ul {
+  .dki-nav li.open > ul {
     display: block;
   }
-  nav ul ul {
+  .dki-nav ul ul {
     display: none;
   }
-}
-
-.nav-arrow {
-  margin-left: 6px;
-  font-size: 0.8em;
-  cursor: pointer;
-}
-
-nav li.open > ul {
-  display: block;
+  .contactbox  {display:block;}
+  .discordframe {
+  width: auto !important;}
 }
 
