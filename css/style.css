@@ -108,7 +108,6 @@ max-width: 900px; }
 
 .card,.discordframe {
 	flex: 1 1 250px;
-	background: #fff;
 	margin: 15px 0px 15px 15px;
 }
 
