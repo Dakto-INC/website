@@ -198,6 +198,7 @@ footer {
   .dki-nav {
     flex-direction: column;
     padding: 8px 0;
+    height: auto;
   }
   .dki-nav ul {
     flex-direction: column;
@@ -219,8 +220,8 @@ footer {
     padding: 10px 16px;
   }
      .card,.discordframe {
-    min-width: 90vw;
-    max-width: 98vw;
+    width: 90vw;
+    width: 98vw;
     margin: 10px 0;
     padding: 12px;
   }
@@ -236,8 +237,7 @@ footer {
   }
   .dki-nav ul ul {
     position: static;
-    min-width: 100%;
-    margin-top: 0;
+    width: 100%;
     box-shadow: none;
   }
   .dki-nav li {
