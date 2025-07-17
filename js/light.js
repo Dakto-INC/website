@@ -1,10 +1,9 @@
-
 const toggleButton = document.getElementById('theme-toggle');
-const discord = document.querySelector(".discordframe");
 const body = document.body;
 body.classList.add('light-mode');
 
 toggleButton.addEventListener('click', () => {
+    discord = document.querySelector(".discordframe");
     if (body.classList.contains('light-mode')) {
         body.classList.replace('light-mode', 'dark-mode');
 	     toggleButton.src = "/img/dark.svg";
