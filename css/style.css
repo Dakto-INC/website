@@ -1,5 +1,5 @@
 body {
-  margin: 0 !important;;
+  margin: 0 !important;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;;
   background: #f4f4f4 !important;
   color: #333 !important;
@@ -12,7 +12,7 @@ body {
   max-width: 600px;
   background-color: white;
 }
-button {
+#theme-toggle {
   padding: 10px 20px;
   font-size: 16px;
   border: none;
