@@ -33,6 +33,7 @@ transition-duration: 0.5s;
  * so that the size of them can
  * be relative to the font-size of the nav bar
  */
+#theme-toggle {cursor: pointer;}
 .dki-nav-logo,#theme-toggle {height: 3em;}
 .dki-nav-arrow{
 	margin-left: -1em;
