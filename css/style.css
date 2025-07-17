@@ -3,7 +3,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;;
 }
 body.light-mode {
-
+        --shadow-color:rgba(151, 148, 148, 0.2);
         --sec-bg-color:#edeaea;
         --fg-color:#333;
         --bg-color:#f4f4f4;
@@ -14,6 +14,7 @@ body.light-mode {
 }
 
 body.dark-mode {
+        --shadow-color:rgba(0, 0, 0, 0.2);
   --sec-bg-color:#383838;
         --fg-color:brown;
         --bg-color:#333;
@@ -115,7 +116,7 @@ max-width: 900px; }
 .card,.discordframe,#infobox,#widerinfobox {
 	border-radius: 8px;
 	background-color:var(--sec-bg-color);
-	box-shadow: 0 0 10px rgba(151, 148, 148, 0.2);
+	box-shadow: 0 0 10px var(--shadow-color);
 	border-style: none;
 	padding: 20px;
 }
