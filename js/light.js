@@ -6,9 +6,9 @@ body.classList.add('light-mode');
 toggleButton.addEventListener('click', () => {
     if (body.classList.contains('light-mode')) {
         body.classList.replace('light-mode', 'dark-mode');
-        toggleButton.textContent = 'Switch to Light Mode';
+	     toggleButton.src = "/img/light.svg";
     } else {
         body.classList.replace('dark-mode', 'light-mode');
-        toggleButton.textContent = 'Switch to Dark Mode';
+	     toggleButton.src = "/img/dark.svg";
     }
 });

@@ -2,20 +2,6 @@ body {
   margin: 0 !important;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;;
 }
-#theme-toggle {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #007bff;
-  color: white;
-  transition: background-color 0.3s;
-  height: 4em;
-}
-#theme-toggle:hover {
-  background-color: #0056b3;
-}
 body.light-mode {
 
         --sec-bg-color:#edeaea;
