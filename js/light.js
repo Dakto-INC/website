@@ -12,7 +12,7 @@ toggleButton.addEventListener('click', () => {
 	    if (disexport) {disexport.setAttribute("src", "https://daktoinc.co.uk/disexport/dark/");}
 	    if (discord) {discord.setAttribute("src", "https://discord.com/widget?id=772434304009109525&theme=dark");}
 	    if (disqus) {
-		    DISQUS.host._loadEmbed();
+		    setTimeout(DISQUS.host._loadEmbed(), 0600);
 	    }
     } else {
         body.classList.replace('dark-mode', 'light-mode');
@@ -20,7 +20,7 @@ toggleButton.addEventListener('click', () => {
 	    if (disexport) {disexport.setAttribute("src", "https://daktoinc.co.uk/disexport/light/");}
 	    if (discord) {discord.setAttribute("src", "https://discord.com/widget?id=772434304009109525&theme=light");}
 	    if (disqus) {
-DISQUS.host._loadEmbed();
+		    setTimeout(DISQUS.host._loadEmbed(), 0600);
     }
 }
 }
