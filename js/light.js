@@ -26,3 +26,4 @@ toggleButton.addEventListener('click', () => {
 }
 }
 );
+	     toggleButton.innerHTML = lighticon;
