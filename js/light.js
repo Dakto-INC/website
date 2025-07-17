@@ -22,4 +22,6 @@ toggleButton.addEventListener('click', () => {
 	    if (disqus) {
 DISQUS.host._loadEmbed();
     }
-});
+}
+}
+);
