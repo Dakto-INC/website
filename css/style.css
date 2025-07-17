@@ -1,16 +1,6 @@
 body {
   margin: 0 !important;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;;
-  background: #f4f4f4 !important;
-  color: #333 !important;
-}
-.container {
-  text-align: center;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  background-color: white;
 }
 #theme-toggle {
   padding: 10px 20px;
@@ -22,7 +12,7 @@ body {
   color: white;
   transition: background-color 0.3s;
 }
-button:hover {
+#theme-toggle:hover {
   background-color: #0056b3;
 }
 body.light-mode {
@@ -30,6 +20,7 @@ body.light-mode {
   color: #333;
 }
 body.dark-mode {
+	--bgcolor=#333;
   background-color: #333;
   color: brown;
 }
@@ -112,7 +103,7 @@ transition-duration: 0.5s;
 }
 #widerinfobox {width: 90vw; min-height: 70vh;}
 #infobox,#widerinfobox {
- margin: 40px auto 0 auto; background: rgba(255,255,255,0.95);}
+ margin: 40px auto 0 auto;}
 #infobox {
 max-width: 900px; }
 
@@ -182,7 +173,6 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9em;
-  background: #f0f0f0;
 }
 
 
