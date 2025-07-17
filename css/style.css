@@ -34,6 +34,11 @@ transition-duration: 0.5s;
  * be relative to the font-size of the nav bar
  */
 #theme-toggle {cursor: pointer;}
+.lightdarkicon{
+width: 2em;
+	margin-bottom: -1.1em;
+  margin-left: 0.5em;
+}
 .dki-nav-logo {height: 3em;}
 .dki-nav-arrow{
 	margin-left: -1em;
