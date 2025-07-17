@@ -87,7 +87,7 @@ width: 2em;
 }
 
 
-.dki-nav-clickbox{display: block ruby;}
+.dki-nav-clickbox,dki-nav-clickbox-lightdark{display: block ruby;}
 .dki-nav  .open > .dki-nav-clickbox > .dki-nav-arrow {rotate: 180deg;}
 .dki-nav  .open > ul {
   display: block;
