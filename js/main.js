@@ -10,7 +10,7 @@
   new Glide('.plide',{
   type: 'carousel',
 	  autoplay: 2700,
-	        perView: 2,
+	        perView: 3,
 	  hoverpause: true,
 	    breakpoints: {
  600: {

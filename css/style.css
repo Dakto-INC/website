@@ -97,6 +97,7 @@ width: 2em;
 .contactbox{display: flex; justify-content: center; align-items: flex-start; }
 .discordframe{width:10%; height: 100vh; 
 	max-width: 350px;}
+.card{height:45em;}
 .dki-nav ul ul {
 	margin-top: -20px;
   display: none;
