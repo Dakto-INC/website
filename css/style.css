@@ -115,12 +115,12 @@ width: 2em;
 #infobox {
 max-width: 900px; }
 
-.card,.discordframe {
+.card,.contact_card,.discordframe {
 	flex: 1 1 250px;
 	margin: 15px 0px 15px 15px;
 }
 
-.card,.discordframe,#infobox,#widerinfobox {
+.card,.contact_card,.discordframe,#infobox,#widerinfobox {
 	border-radius: 8px;
 	background-color:var(--sec-bg-color);
 	box-shadow: 0 0 10px var(--shadow-color);
