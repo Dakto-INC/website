@@ -10,6 +10,7 @@ function lightdark(light){
     disqus = document.querySelector("#disqus_thread");
     if (light==="dark") {
         body.classList.replace('light-mode', 'dark-mode');
+localStorage.setItem("dark",true);
 	     toggleButton.innerHTML = darkicon;
 	    if (disexport) {disexport.setAttribute("src", "https://daktoinc.co.uk/disexport/dark/");}
 	    if (discord) {discord.setAttribute("src", "https://discord.com/widget?id=772434304009109525&theme=dark");}
@@ -18,6 +19,7 @@ function lightdark(light){
 	    }
     } else {
         body.classList.replace('dark-mode', 'light-mode');
+localStorage.setItem("dark",false);
 	     toggleButton.innerHTML = lighticon;
 	    if (disexport) {disexport.setAttribute("src", "https://daktoinc.co.uk/disexport/light/");}
 	    if (discord) {discord.setAttribute("src", "https://discord.com/widget?id=772434304009109525&theme=light");}
@@ -39,9 +41,16 @@ toggleButton.addEventListener('click', () => {
 }
 
 );
+if (localStorage.getItem("dark")===null ){
+if (window.matchMedia){
+localStorage.setItem("dark",window.matchMedia('(prefers-color-scheme: dark)').matches);
+} else {
+localStorage.setItem("dark",false);
+}
+}
 
 
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+if (localStorage.getItem("dark")) {
 	                lightdark("dark");
 } else {
 
