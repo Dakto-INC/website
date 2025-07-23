@@ -29,7 +29,7 @@ function lightdark(light){
 
 }
 
-function main(){
+function lightdarkmain(){
 toggleButton.addEventListener('click', () => {
     if (body.classList.contains('light-mode')) {
 	    lightdark("dark");
@@ -49,4 +49,5 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
 }
 }
 
-main();
+document.addEventListener('DOMContentLoaded',lightdarkmain );
+
