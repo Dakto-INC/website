@@ -50,7 +50,7 @@ localStorage.setItem("dark",false);
 }
 
 
-if (localStorage.getItem("dark")===false) {
+if (localStorage.getItem("dark")===true) {
 	                lightdark("dark");
 } else {
 
