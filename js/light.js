@@ -10,7 +10,7 @@ function lightdark(light){
     disqus = document.querySelector("#disqus_thread");
     if (light==="dark") {
         body.classList.replace('light-mode', 'dark-mode');
-localStorage.setItem("dark","Yes");
+localStorage.setItem("lightdark","dark");
 	     toggleButton.innerHTML = darkicon;
 	    if (disexport) {disexport.setAttribute("src", "https://daktoinc.co.uk/disexport/dark/");}
 	    if (discord) {discord.setAttribute("src", "https://discord.com/widget?id=772434304009109525&theme=dark");}
@@ -19,7 +19,7 @@ localStorage.setItem("dark","Yes");
 	    }
     } else {
         body.classList.replace('dark-mode', 'light-mode');
-localStorage.setItem("dark","No");
+localStorage.setItem("lightdark","light");
 	     toggleButton.innerHTML = lighticon;
 	    if (disexport) {disexport.setAttribute("src", "https://daktoinc.co.uk/disexport/light/");}
 	    if (discord) {discord.setAttribute("src", "https://discord.com/widget?id=772434304009109525&theme=light");}
@@ -41,19 +41,19 @@ toggleButton.addEventListener('click', () => {
 }
 
 );
-if (localStorage.getItem("dark")===null ){
+if (localStorage.getItem("lightdark")===null ){
 if (window.matchMedia){
-localStorage.setItem("dark",window.matchMedia('(prefers-color-scheme: dark)').matches ? "Yes": "No");
+localStorage.setItem("lightdark",window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark": "light");
 		
 
 
 } else {
-localStorage.setItem("dark","No");
+localStorage.setItem("lightdark","light");
 }
 }
 
 
-if (localStorage.getItem("dark")==="Yes") {
+if (localStorage.getItem("lightdark")==="dark") {
 	                lightdark("dark");
 } else {
 
