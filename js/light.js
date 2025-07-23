@@ -8,7 +8,7 @@ function lightdark(light){
   discord = document.querySelector(".discordframe");
     disexport = document.querySelector("#disexport");
     disqus = document.querySelector("#disqus_thread");
-    if (light==="light") {
+    if (light==="dark") {
         body.classList.replace('light-mode', 'dark-mode');
 	     toggleButton.innerHTML = darkicon;
 	    if (disexport) {disexport.setAttribute("src", "https://daktoinc.co.uk/disexport/dark/");}
