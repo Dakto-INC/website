@@ -43,13 +43,9 @@ toggleButton.addEventListener('click', () => {
 );
 if (localStorage.getItem("dark")===null ){
 if (window.matchMedia){
-	if (window.matchMedia('(prefers-color-scheme: dark)').matches){
-localStorage.setItem("dark","Yes");
+localStorage.setItem("dark",window.matchMedia('(prefers-color-scheme: dark)').matches ? "Yes": "No");
 		
-} else {
-localStorage.setItem("dark","No");
 
-}
 
 } else {
 localStorage.setItem("dark","No");
