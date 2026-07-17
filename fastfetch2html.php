@@ -35,7 +35,7 @@ loopoutput($outputA);
 //get neofetch info
 
  echo '<pre  class="archinfo">';
-exec('fastfetch -L none | aha --no-header', $outputB, $useless);
+exec('fastfetch -L none -c none | aha --no-header', $outputB, $useless);
 loopoutput($outputB);
 
 echo '</pre>';
