@@ -1,0 +1,76 @@
+
+.colbox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pbox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1 1 20rem;
+  min-width: 0;
+  width: auto;
+  margin: 0;
+  padding: 0.9rem 1.5rem 0.9rem 0.9rem;
+  border: 4px dashed gold;
+  border-radius: 999px;
+}
+
+.ptbox {
+  display: block;
+  min-width: 0;
+}
+
+.ptbox p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.name,
+.ptbox p.name {
+  font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.title {
+  margin: 1.5rem 0 1rem;
+  text-align: center;
+  text-decoration-line: underline;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: clamp(1.3rem, 1rem + 1.2vw, 2rem);
+}
+
+.title:first-child {
+  margin-top: 0;
+}
+
+.admin  { color: #029b02; }
+.former { color: rgb(114, 9, 9); }
+.mod    { color: #b00303; }
+.owner  { color: #028a8a; }
+
+body.dark-mode .admin  { color: #3ccf3c; }
+body.dark-mode .former { color: #d16a6a; }
+body.dark-mode .mod    { color: #ff6b6b; }
+body.dark-mode .owner  { color: #3fd0d0; }
+
+.player {
+  flex-shrink: 0;
+  width: auto;
+  height: clamp(64px, 12vw, 100px);
+}
+
+/* DONT REMOVE */
+@media only screen and (max-width: 600px) {
+  .pbox {
+    flex-basis: 100%;
+    border-radius: 24px;
+    padding: 0.75rem;
+  }
+}
