@@ -1,0 +1,54 @@
+server:
+  cacheDir: /opt/filebrowser/tmp
+  database:
+    path: /opt/filebrowser/filebrowser.sqlite
+  filesystem:
+    createFilePermission: 640
+    createDirectoryPermission: 750
+  sources:
+    - path: /
+      name: Jellyfin
+      config:
+        defaultEnabled: true
+        defaultUserScope: /var/lib/jellyfin
+        createUserDir: true
+        defaultPermissions:
+          view: true
+          download: true
+          modify: true
+          create: true
+          delete: true
+          configured: true
+          
+http:
+  listen: 0.0.0.0
+  port: 8081
+  baseURL: /
+  trustProxyHeaders: true
+  externalUrl: https://harryfiles.daktoinc.co.uk
+
+auth:
+  tokenExpirationHours: 2
+  adminUsername: admin
+  adminPassword: thisistheadminpassword
+  methods:
+    password:
+      enabled: true
+      minLength: 12
+      signup: false
+
+frontend:
+  name: Jellyfin
+
+userDefaults:
+  listing:
+    viewMode: list
+    showHidden: true
+    singleClick: false
+  ui:
+    darkMode: true
+    locale: en
+  account:
+    permissions:
+      share: true
+
