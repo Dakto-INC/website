@@ -55,10 +55,10 @@
 .mod    { color: #b00303; }
 .owner  { color: #028a8a; }
 
-body.dark-mode .admin  { color: #3ccf3c; }
-body.dark-mode .former { color: #d16a6a; }
-body.dark-mode .mod    { color: #ff6b6b; }
-body.dark-mode .owner  { color: #3fd0d0; }
+.dark-mode .admin  { color: #3ccf3c; }
+.dark-mode .former { color: #d16a6a; }
+.dark-mode .mod    { color: #ff6b6b; }
+.dark-mode .owner  { color: #3fd0d0; }
 
 .player {
   flex-shrink: 0;
