@@ -23,10 +23,15 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Theme variables live on <html> (:root) so the theme can be applied before
-   the body exists. The class is set by the inline script in nav.html and kept
-   in sync by light.js. Light is the default if neither has run. */
-:root {
+/* Theme variables. The theme class can be on <html> (set before first paint by
+   the inline script in new/nav.html) and/or on <body> (set by light.js, and by
+   the old /js/light.js when the old root nav.html is injected into this page).
+   Matching body.light-mode / body.dark-mode too keeps these values winning over
+   the legacy /css/style.css, which also loads here and sets its own
+   body.dark-mode colours (including `--fg-color: brown`). Light is the default
+   if no class is set yet. */
+:root,
+body.light-mode {
   color-scheme: light;
   --bg-color: #f3f4f6;
   --sec-bg-color: #ffffff;
@@ -41,7 +46,8 @@ body {
   --glide-bullet-active-color: #2a6f9b;
 }
 
-:root.dark-mode {
+:root.dark-mode,
+body.dark-mode {
   color-scheme: dark;
   --bg-color: #15171b;
   --sec-bg-color: #20242a;
