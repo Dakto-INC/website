@@ -2,6 +2,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#1e1e1e">
+<meta name="color-scheme" content="light dark">
+<script>
+/* Runs before first paint: pick the saved theme (or the OS preference) and put
+   it on <html>, so there is no flash of the wrong theme. light.js takes over
+   once the page has loaded. */
+(function () {
+  var theme = null;
+  try { theme = localStorage.getItem('lightdark'); } catch (e) {}
+  if (theme !== 'dark' && theme !== 'light') {
+    theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  var root = document.documentElement;
+  root.classList.add(theme + '-mode');
+  root.style.colorScheme = theme;
+})();
+</script>
 <link rel="icon" href="/dki-1.ico" type="image/x-icon">
 <link rel="stylesheet" href="/new/css/glide.core.css">
 <link rel="stylesheet" href="/new/css/glide.theme.css">

@@ -12,44 +12,44 @@
 <link rel="stylesheet" href="/new/css/glide.theme.css">
 <link rel="stylesheet" href="/new/css/style.css">
 </head>
-<body class="light-mode">
+<body>
   <header id="fatbox">
     <h1 id="fattextbox">Welcome to Dakto INC</h1>
   </header>
   <a rel="me" href="https://mastodon.daktoinc.co.uk/@Dakto" style="display:none">Mastodon</a>
 
   <main>
-    <section id="infobox">
-      <h2 id="infoboxtitle">Main Info</h2>
+    <section class="infobox" id="main-info">
+      <h2 class="infoboxtitle">Main Info</h2>
       <p>Dakto INC is a project idea that hosts different socials: Matrix, Mastodon, Discord, Reddit, IRC, Git, and Minecraft. What started out as an idea from boredom became Dakto INC. Hardware information at <a href="https://wiki.daktoinc.co.uk/index.php?title=Server_Info">DKI Wiki - Server Info</a>. We are mainly known for hosting the Survival and Creative Multiplayer Minecraft Server running on Paper 26.2. It has been running since 17 April 2024 nonstop. We hope you enjoy your time at Dakto INC!</p>
 
-      <h2 id="infoboxtitle">Minecraft Server IP</h2>
-      <p><strong>Java</strong>: <code>minecraft.daktoinc.co.uk</code></p>
-      <p><strong>Beta 1.7.3</strong>: <code>beta.daktoinc.co.uk</code></p>
-      <p><strong>Bedrock</strong>: <code>minecraft.daktoinc.co.uk:19132</code></p>
-      <p><strong>Eaglercraft</strong>: <code>wss://eaglercraft.daktoinc.co.uk</code></p>
+      <h2 class="infoboxtitle" id="server-ip">Minecraft Server IP</h2>
+      <p><strong>Java</strong>: <code class="copyable">minecraft.daktoinc.co.uk</code></p>
+      <p><strong>Beta 1.7.3</strong>: <code class="copyable">beta.daktoinc.co.uk</code></p>
+      <p><strong>Bedrock</strong>: <code class="copyable">minecraft.daktoinc.co.uk:19132</code></p>
+      <p><strong>Eaglercraft</strong>: <code class="copyable">wss://eaglercraft.daktoinc.co.uk</code></p>
 
-      <h2 id="infoboxtitle">How to connect to Dakto INC Minecraft Server?</h2>
+      <h2 class="infoboxtitle" id="how-to-connect">How to connect to Dakto INC Minecraft Server?</h2>
       <p><strong>Java:</strong> You can join Dakto INC with an official/cracked Minecraft Java Edition client on 1.7 to 1.21.11 and join <code>minecraft.daktoinc.co.uk</code> or <code>mc.daktoinc.co.uk</code> or connect from version Beta 1.7.3 using <code>beta.daktoinc.co.uk</code>.</p>
       <p><strong>Eaglercraft:</strong> You can join Dakto INC through Eaglercraft on any version from 1.5.2 to 1.12.2 and add the server ip <code>wss://eaglercraft.daktoinc.co.uk</code>.</p>
       <p><strong>Bedrock:</strong> You can join Dakto INC with an official/cracked Minecraft Bedrock Edition account on 1.21.80 to 1.21.90 and join <code>minecraft.daktoinc.co.uk</code> with port <code>19132</code>.</p>
       <h3>Make sure to always read the rules when joining the server.</h3>
 
-      <h3>Where are the rules?</h3>
+      <h3 id="rules">Where are the rules?</h3>
       <p>You can find them in-game or on our <a href="https://daktoinc.co.uk/discord">Discord server</a>. We are fairly open—Xray, Freecam, and Fullbright are all allowed. However, no kill-aura, reach, or other major cheats.</p>
 
-      <h2 id="infoboxtitle">No Discord?</h2>
+      <h2 class="infoboxtitle" id="no-discord">No Discord?</h2>
       <p>You can use the <a href="https://wiki.daktoinc.co.uk/index.php?title=IRC">IRC</a> channel or websites like Dynmap or Minetest-style chat portals with WEBIRC support.</p>
     </section>
 
-    <section id="infobox">
-      <h2 id="infoboxtitle">Web Map</h2>
+    <section class="infobox" id="web-map">
+      <h2 class="infoboxtitle">Web Map</h2>
       <iframe class="webmap" src="https://minecraft.daktoinc.co.uk" title="Dakto INC Live Map" loading="lazy" referrerpolicy="no-referrer"></iframe>
       <p>You can use this map for finding new places to explore and searching for other players. Fullscreen version at <a href="https://minecraft.daktoinc.co.uk" target="_blank" rel="noopener noreferrer">minecraft.daktoinc.co.uk</a>.</p>
     </section>
 
-    <section id="infobox">
-      <h2 id="infoboxtitle">Dakto INC SMP</h2>
+    <section class="infobox" id="smp-gallery">
+      <h2 class="infoboxtitle">Dakto INC SMP</h2>
       <div class="piclide glide">
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
@@ -178,8 +178,8 @@
       </div>
     </section>
 
-    <section id="infobox">
-      <h2 id="infoboxtitle">Places of Interest</h2>
+    <section class="infobox" id="places-of-interest">
+      <h2 class="infoboxtitle">Places of Interest</h2>
       <div class="plide glide">
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
@@ -231,8 +231,8 @@
     </section>
 
 <!-- Old joke from Qute! The image link no longer exists, so this has been commented out.
-    <section id="infobox">
-      <h2 id="infoboxtitle">Dakto INC is the<br> best minecraft server ever.<br> (According to the CEO)</h2>
+    <section class="infobox" id="ceo">
+      <h2 class="infoboxtitle">Dakto INC is the<br> best minecraft server ever.<br> (According to the CEO)</h2>
       <img class="ceopic" src="/img/ceo.png" alt="The CEO of Dakto INC" loading="lazy">
     </section>
   </main> -->
@@ -243,5 +243,6 @@
 
   <script src="https://unpkg.com/@glidejs/glide@3.7.1/dist/glide.js"></script>
   <script src="/new/js/main.js"></script>
+  <script src="/new/js/copy.js"></script>
 </body>
 </html>

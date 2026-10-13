@@ -23,7 +23,14 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body,
+/* Theme variables. The theme class can be on <html> (set before first paint by
+   the inline script in new/nav.html) and/or on <body> (set by light.js, and by
+   the old /js/light.js when the old root nav.html is injected into this page).
+   Matching body.light-mode / body.dark-mode too keeps these values winning over
+   the legacy /css/style.css, which also loads here and sets its own
+   body.dark-mode colours (including `--fg-color: brown`). Light is the default
+   if no class is set yet. */
+:root,
 body.light-mode {
   color-scheme: light;
   --bg-color: #f3f4f6;
@@ -39,6 +46,7 @@ body.light-mode {
   --glide-bullet-active-color: #2a6f9b;
 }
 
+:root.dark-mode,
 body.dark-mode {
   color-scheme: dark;
   --bg-color: #15171b;
@@ -442,8 +450,51 @@ box-shadow: 0 8px 28px var(--shadow-color);
 }
 
 #infobox ul:not(.glide__slides),
+.infobox ul:not(.glide__slides),
 #widerinfobox ul:not(.glide__slides) {
 padding-left: 1.25rem;
+}
+
+/* Anchor links (e.g. /#server-ip) should not land underneath the sticky nav. */
+main [id],
+.infobox[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+/* Copy buttons, added next to <code class="copyable"> by copy.js. */
+.copy-btn {
+  margin-left: 0.5rem;
+  padding: 0.1em 0.7em;
+  min-width: 5.5em;
+  font: inherit;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  white-space: nowrap;
+  color: var(--accent-color);
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.copy-btn:hover,
+.copy-btn.is-copied {
+  background: var(--accent-color);
+  color: var(--sec-bg-color);
+}
+
+/* Text for screen readers only (used for the "Copied" announcement). */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .card {
